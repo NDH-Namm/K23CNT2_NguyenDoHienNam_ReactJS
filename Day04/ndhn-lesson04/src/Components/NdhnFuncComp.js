@@ -5,10 +5,10 @@ export default function NdhnFuncComp(props) {
         <div>
             <h2>Demo: Function Components Props</h2>
             <p>Lấy dữ liệu từ Props để hiển thị</p>
-            <p>Name: {Props.name}</p>
-            <p>Address: {Props.address}</p>
-            <p>Company: {Props.company}</p>
-            <p>Note: {Props.name}</p>
+            <p>Name: {props.name}</p>
+            <p>Address: {props.address}</p>
+            <p>Company: {props.company}</p>
+            <p>Note: {props.name}</p>
         </div>
     )
 }

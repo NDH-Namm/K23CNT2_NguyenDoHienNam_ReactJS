@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import NdhnFuncComp from './Components/NdhnFuncComp';
 import NdhnFuncComp1 from './Components/NdhnFuncComp1';
+import NdhnClassComp from './Components/NdhnClassComp';
 
 function NdhnApp() {
   //object
@@ -22,6 +23,9 @@ function NdhnApp() {
         <div className='alert alert-info'>
           <NdhnFuncComp1 renderInfo={users} />
         </div>
+        <NdhnClassComp />
+        {/* chuyển dữ liệu từ NdhnApp -> xuống NdhnClassComp */}
+        <NdhnClassComp renderName="K23CNT2" renderUsers={users} />
     </div>
   );
 }
