@@ -1,22 +1,22 @@
 import React from "react";
 
-export default function NdhnFuncCompEventProps(props) {
+export default function NdhnFuncCompEventProps(ndhnProps) {
     //Hàm xử lí sự kiện
     const ndhnHandleButtonClick1 = ()=>{
-        alert("Dữ liệu từ props:" + props.ndhnRenderName);
-        console.log("Xin chào:",props.ndhnRenderName);
+        alert("Dữ liệu từ props:" + ndhnProps.ndhnRenderName);
+        console.log("Xin chào:",ndhnProps.ndhnRenderName);
     }
 
     const ndhnHandleButtonClick2 = (param)=>{
         //Lấy dữ liệu từ props
-        alert("Dữ liệu từ props (Button 2 click):" + props.ndhnRenderName);
+        alert("Dữ liệu từ props (Button 2 click):" + ndhnProps.ndhnRenderName);
         //Dữ liệu từ tham số
         console.log("=========================");
         console.log("Hi:",param);
         console.log("=========================");
     }
     return(
-        <div className="alert aler-danger">
+        <div className="alert aler-info">
             <button className="btn btn-primary mx-1"
                 onClick={ndhnHandleButtonClick1}>Button1</button>
 
