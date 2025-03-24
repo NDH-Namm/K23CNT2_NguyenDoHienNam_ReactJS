@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
 
 export default function NdhnFormUser({onNdhnAddNew}) {
-    const [ndhnId, setNdhnId] = useState('')
+    const [id, setNdhnId] = useState('')
     const [ndhnFullName, setNdhnFullName] = useState('')
     const [ndhnUserName, setNdhnUserName] = useState('')
     const [ndhnPass, setNdhnPass] = useState('')
-
- 
-    const ndhnHandleSubmit = (event) =>{
+    
+    const ndhnHandleSubmit = (event)=> {
         event.preventDefault();
-        console.log(ndhnId,ndhnFullName,ndhnUserName,ndhnPass)
-        onNdhnAddNew({ndhnId,ndhnFullName,ndhnUserName,ndhnPass})
+        console.log(id, ndhnFullName, ndhnUserName, ndhnPass)
+        onNdhnAddNew({ id, ndhnFullName, ndhnUserName, ndhnPass })
     }
   return (
     <div>
       <form>
             <p>Mã sinh viên:
-                <input type='text' name='ndhnId' value={ndhnId} onChange={(ev)=>setNdhnId(ev.target.value)}/> </p>
+                <input type='text' name='id' value={id} onChange={(ev)=>setNdhnId(ev.target.value)}/> </p>
             <p>Họ và tên:
                 <input type='text' name='ndhnFullName' value={ndhnFullName} onChange={(ev)=>ndhnFullName(ev.target.value)}/> </p>
             <p>Tài khoản:

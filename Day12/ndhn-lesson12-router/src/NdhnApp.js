@@ -20,7 +20,12 @@ export default function NdhnApp() {
   const ndhnHandleAdd = (ndhnParam)=>{
     console.log('ndhnHandleAdd:', ndhnParam);
 
-    setNdhnUsers()
+    setNdhnUsers(prev =>{ 
+      return [
+      ...prev,
+      ndhnParam
+      ]
+    })
   }
   return (
     <div className='container border my-3'>
